@@ -138,7 +138,7 @@ main {
         flex-direction: row; /* Keep header links in a row */
         align-items: center;
         margin-left: 0; /* Remove left margin */
-        gap: 10px; /* Adjust gap between links */
+        gap: 7px; /* Adjust gap between links */
         flex-wrap: wrap; /* Allow wrapping of links */
     }
     .header-links a {
@@ -146,7 +146,7 @@ main {
     }
     .header-logo {
         height: 60px; /* Adjust height for smaller screens */
-        margin-left: 5px;
+        margin-left: -2px;
     }
     main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
