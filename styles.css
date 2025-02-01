@@ -146,8 +146,7 @@ main {
     }
     header {
         flex-direction: row; /* Keep header links in a row */
-        height: auto; /* Adjust height for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
         justify-content: space-between; /* Space out header links */
     }
     .header-links {
@@ -161,7 +160,7 @@ main {
         font-size: 14px; /* Adjust font size for smaller screens */
     }
     .header-logo {
-        height: auto; /* Adjust height for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
     }
     main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
