@@ -100,13 +100,21 @@ header {
     justify-content: flex-start; /* Align the header content to the left */
     align-items: center;
     text-align: center;
-    background-color: #0d0d0d; /* Medium pastel green background color */
+    background-image: url('pat'); /* Set the header background image */
+    background-size: cover; /* Ensure the image covers the entire header */
+    background-position: center; /* Center the background image */
     padding: 5px; /* Reduce padding to make the header smaller */
     height: 60px; /* Set the height of the header */
     position: fixed; /* Make the header fixed */
     width: 100%; /* Make the header full width */
     top: 0; /* Position the header at the top */
     z-index: 1000; /* Ensure the header is above other content */
+}
+img {
+    max-width: 100%;
+    max-height: 60px; /* Set the maximum height of the image */
+    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Maintain aspect ratio */
 }
     .header-logo {
         margin-left: 0px; /* Add margin to the left of the log o */
