@@ -2,7 +2,7 @@ body {
     font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #151515; /* Pastel green background color */
+    background-color: #b4b4b4; /* Pastel green background color */
     color: #c4c4c4; /* Pastel green text color */ 
     padding: 0;
 }
@@ -12,8 +12,8 @@ a {
     text-rendering: geometricPrecision;
 }
 h2 {
-    color: #c4c4c4; /* Pastel green color */
-    background-color: #151515; /* Pastel green background color */
+    color: #000000; /* Pastel green color */
+    background-color: #dbdbdb; /* Pastel green background color */
     padding: 10px;
     align-items: center;
     text-align: center;
