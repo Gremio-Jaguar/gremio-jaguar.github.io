@@ -7,24 +7,12 @@ body {
     padding: 0;
     margin: 0px;
 }
-a {
-    color: #c4c4c4; /* Pastel green link color */
-    text-decoration: none;
-    text-rendering: geometricPrecision;
-}
 h2 {
     color: #c4c4c4; /* Pastel green color */
-    background-color: #0d0d0d; /* Pastel green background color */
     padding: 10px;
     align-items: center;
     text-align: center;
-    margin: 0;
-}
-h3 {
-    color: #c4c4c4; /* Pastel green color */
-    background-color: #0d0d0d; /* Pastel green background color */
-    padding: 10px;
-    text-align: center;
+    text-justify: center;
     margin: 0;
 }
 .topics {
@@ -36,15 +24,12 @@ h3 {
     flex: 1;
     margin: 0 10px; /* Add margin between dividers */
     text-align: center;
-    background-color: hsl(0, 0%, 8%); /* Pastel green background color for dividers */
+    background-color: #141414; /* Pastel green background color for dividers */
     padding: 20px;
     border-radius: 10px; /* Rounded corners for dividers */
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.topics h3 {
-    font-weight: bold; /* Make the header text bold */
 }
 .contact-section {
     display: flex;
@@ -109,7 +94,7 @@ header {
     z-index: 1000; /* Ensure the header is above other content */
 }
     .header-logo {
-        margin-left: 0px; /* Add margin to the left of the log o */
+        margin-left: 5px; /* Add margin to the left of the log o */
         height: 60px; /* Set the height of the logo to match the header */
     }
 
@@ -161,6 +146,7 @@ main {
     }
     .header-logo {
         height: 60px; /* Adjust height for smaller screens */
+        margin-left: 5px;
     }
     main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
