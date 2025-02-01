@@ -1,0 +1,165 @@
+body {
+    font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #151515; /* Pastel green background color */
+    color: #c4c4c4; /* Pastel green text color */ 
+    padding: 0;
+}
+a {
+    color: #c4c4c4; /* Pastel green link color */
+    text-decoration: none;
+    text-rendering: geometricPrecision;
+}
+h2 {
+    color: #c4c4c4; /* Pastel green color */
+    background-color: #151515; /* Pastel green background color */
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+h3 {
+    color: #c4c4c4; /* Pastel green color */
+    background-color: #0d0d0d; /* Pastel green background color */
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+.topics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.topics div {
+    flex: 1;
+    margin: 0 10px; /* Add margin between dividers */
+    text-align: center;
+    background-color: hsl(0, 0%, 8%); /* Pastel green background color for dividers */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for dividers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.topics h3 {
+    font-weight: bold; /* Make the header text bold */
+}
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: hsl(0, 0%, 8%);
+    border-radius: 10px; 
+    margin: 20px;
+}
+.topics button {
+    background-color: #0d0d0d; 
+    border-width: 0;
+    color: hsl(230, 10%, 24%); 
+    padding: 20px 60px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+.topics button:hover {
+    background-color:  hsl(230, 10%, 28%); /* Darker pastel green on hover */
+    color: #c4c4c4;
+}
+.topics p {
+    margin-top: 10px; /* Add margin to separate text from button */
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+@keyframes fallFromAbove {
+    from {
+        top: -100%;
+        opacity: 0;
+    }
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+header {
+    display: flex;
+    justify-content: flex-start; /* Align the header content to the left */
+    align-items: center;
+    text-align: center;
+    background-color: #0d0d0d; /* Medium pastel green background color */
+    padding: 5px; /* Reduce padding to make the header smaller */
+    height: 60px; /* Set the height of the header */
+    position: fixed; /* Make the header fixed */
+    width: 100%; /* Make the header full width */
+    top: 0; /* Position the header at the top */
+    z-index: 1000; /* Ensure the header is above other content */
+}
+    .header-logo {
+        margin-left: 0px; /* Add margin to the left of the log o */
+        width: 60px;
+    }
+
+    .header-links {
+        display: flex;
+        gap: 15px; /* Space between links */
+        margin-left: 0px; /* Add margin to the left of the links */
+    }
+        .header-links a {
+            color: #373943; /* White text color for better contrast */
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+            .header-links a:hover
+            {
+                color: #7e849a;
+            }   
+main {
+    padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed header */
+}
+@media (max-width: 768px) {
+    .topics {
+        flex-direction: column;
+        align-items: center;
+    }
+    .topics div {
+        margin: 10px 0; /* Adjust margin for vertical alignment */
+    }
+    .topics button {
+        width: 100%; /* Make buttons full width */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+    header {
+        flex-direction: row; /* Keep header links in a row */
+        height: auto; /* Adjust height for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        justify-content: space-between; /* Space out header links */
+    }
+    .header-links {
+        flex-direction: row; /* Keep header links in a row */
+        align-items: center;
+        margin-left: 0; /* Remove left margin */
+        gap: 10px; /* Adjust gap between links */
+        flex-wrap: wrap; /* Allow wrapping of links */
+    }
+    .header-links a {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    main {
+        padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
+    }
+}
