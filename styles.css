@@ -99,13 +99,10 @@ h3 {
 header {
     display: flex;
     justify-content: flex-start; /* Align the header content to the left */
-    align-items: center;
-    text-align: center;
     background-image: url('https://github.com/Gremio-Jaguar/gremio-jaguar.github.io/blob/main/header-background.jpeg?raw=true'); /* Set the header background image */
     background-size: cover; /* Ensure the image covers the entire header */
     background-position: center; /* Center the background image */
-    padding: 5px; /* Reduce padding to make the header smaller */
-    height: 50px; /* Set the height of the header */
+    height: 60px; /* Set the height of the header */
     position: fixed; /* Make the header fixed */
     width: 100%; /* Make the header full width */
     top: 0; /* Position the header at the top */
@@ -113,11 +110,12 @@ header {
 }
     .header-logo {
         margin-left: 0px; /* Add margin to the left of the log o */
-        width: 60px;
+        height: 60px; /* Set the height of the logo to match the header */
     }
 
     .header-links {
         display: flex;
+        align-items: center;
         gap: 15px; /* Space between links */
         margin-left: 0px; /* Add margin to the left of the links */
     }
@@ -161,6 +159,9 @@ main {
     }
     .header-links a {
         font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .header-logo {
+        height: auto; /* Adjust height for smaller screens */
     }
     main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
