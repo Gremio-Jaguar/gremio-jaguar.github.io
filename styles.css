@@ -10,10 +10,15 @@ body {
 h2 {
     color: #c4c4c4; /* Pastel green color */
     padding: 10px;
-    align-items: center;
     text-align: center;
-    text-justify: center;
     margin: 0;
+}
+h3 {
+    color: #ffffff; /* White color */
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0; /* Add margin to separate from other content */
+    border-radius: 5px; /* Rounded corners */
 }
 .topics {
     display: flex;
@@ -31,6 +36,72 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
+.topics-alt {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.topics-alt div {
+    flex: 1;
+    margin: 0 10px; /* Add margin between dividers */
+    text-align: center;
+    background-color: #1f1f1f; /* Different background color for alt dividers */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for dividers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.topics-alt div:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.noticia1 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px; 
+}
+.noticia2 {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px; 
+}
+.noticia1, .noticia2 {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.noticia1, .noticia2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.noticia1 img, .noticia2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.noticia1:hover img, .noticia2:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.noticia1 p, .noticia2 p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .contact-section {
     display: flex;
     justify-content: center;
@@ -113,7 +184,34 @@ header {
             .header-links a:hover
             {
                 color: #ffffff;
-            }   
+            }
+        .header-links a {
+            position: relative;
+            text-decoration: none;
+            color: #ffffff; /* Adjust the color as needed */
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .header-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            right: 0;
+            background: #ffffff; /* Adjust the color as needed */
+            transition: width 0.3s ease, background-color 0.3s ease;
+            border-radius: 5px; /* Make the border rounded */
+        }
+
+        .header-links a:hover::after,
+        .header-links a.active::after {
+            width: 100%;
+            left: 0;
+            background: #ffffff; /* Adjust the color as needed */
+            border-radius: 5px; /* Make the border rounded */
+        }
 main {
     padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed header */
 }
@@ -150,5 +248,109 @@ main {
     }
     main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
+    }
+}
+
+/* Slider container */
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* News cards container */
+.news-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* News cards container */
+.autoplay {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Individual news card */
+.news-card {
+    background-color: #1f1f1f; /* Background color for the card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    width: 200px; /* Fixed width for the card */
+    text-align: center;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+}
+
+.news-card:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* News image */
+.news-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+/* News description */
+.news-description {
+    color: #ffffff; /* Text color */
+    margin-top: 10px; /* Space between image and text */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .slides {
+        flex-wrap: nowrap;
+    }
+
+    .news-card {
+        width: 100%; /* Full width for mobile */
     }
 }
