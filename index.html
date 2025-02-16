@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+<script src="scripts.js"></script>
 <head>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <title>Grêmio Jaguar</title>
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/197407915?s=400&u=58cff4d108eb3b7fe2fb2c65aa15100926315136&v=4">
     <meta property="og:title" content="Grêmio Jaguar">
@@ -23,15 +25,15 @@
         });
     </script>
 </head>
-    <header>
-        <div class="header-links">
-            <img src="header-logo.png" alt="Logo" class="header-logo">
-            <a href="#home">Redes Sociais</a>
-            <a href="#about">Quem Somos</a>
-            <a href="#news">Noticias</a>
-            <a href="#contact">Contate-nos</a>
-        </div>
-    </header>
+<header>
+    <div class="header-links">
+        <img src="header-logo.png" alt="Logo" class="header-logo">
+        <a href="#home" class="nav-link active">Redes Sociais</a>
+        <a href="#about" class="nav-link">Quem Somos</a>
+        <a href="#news" class="nav-link">Noticias</a>
+        <a href="#contact" class="nav-link">Contate-nos</a>
+    </div>
+</header>
     <main>
         <section id="home">
             <p></p>
@@ -50,16 +52,6 @@
 
                 </div>
 
-                <div id="youtube">
-                    <button onclick="location.href=''"><i class="fab fa-youtube"></i> YouTube</button>
-                    <p>Videos, Lives, Podcasts and etc are mainly posted here</p>
-                </div>
-
-                <div id="github">
-                    <button onclick="location.href=''"><i class="fab fa-github"></i> GitHub</button>
-                    <p>Miscellaneous projects</p>
-                </div>
-
             </div>
         </section>
 
@@ -68,6 +60,26 @@
 
                     <h2>Quem Somos?</h2> <!-- About section header -->
                     <p><strong>A Imprensa do Grêmio Estudantil</strong> é um setor do <strong>Grêmio Estudantil</strong> dedicada à comunicação e divulgação de informações para a comunidade escolar. Nosso objetivo é informar, conscientizar e engajar os estudantes sobre assuntos como eventos, projetos, reivindicações e debates de interesse da escola.</p>
+                </div>
+            </section>
+
+            <section id="news">
+                <div class="contact-section">
+                    <h2>Notícias</h2>
+                    <div class="autoplay">
+                        <div class="news-card" id="noticia1">
+                            <img src="Noticias/noticia1.jpeg" alt="Notícia 1" class="news-image" />
+                            <p class="news-description">Descrição da Notícia 1</p>
+                        </div>
+                        <div class="news-card" id="noticia2">
+                            <img src="Noticias/noticia2.jpeg" alt="Notícia 2" class="news-image" />
+                            <p class="news-description">Descrição da Notícia 2</p>
+                        </div>
+                        <div class="news-card" id="noticia3">
+                            <img src="Noticias/noticia3.jpeg" alt="Notícia 3" class="news-image" />
+                            <p class="news-description">Descrição da Notícia 3</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
