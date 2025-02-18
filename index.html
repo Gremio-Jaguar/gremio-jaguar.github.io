@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="scripts.js"></script>
 <head>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grêmio Jaguar</title>
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/197407915?s=400&u=58cff4d108eb3b7fe2fb2c65aa15100926315136&v=4">
     <meta property="og:title" content="Grêmio Jaguar">
     <meta property="og:description" content="Site Oficial do Grêmio Estudantil da FUNEC - Nova Contagem">
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/197407915?s=400&u=58cff4d108eb3b7fe2fb2c65aa15100926315136&v=4">
     <meta property="og:url" content="https://gremio-jaguar.github.io/">
     <meta name="twitter:card" content="summary_large_image">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script>
-        function togglePopup() {
-            document.getElementById("popup").classList.toggle("active");
-        }
-        document.addEventListener("DOMContentLoaded", function() {
-            document.body.classList.remove("loading");
-        });
-    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+<body>
 <header>
     <div class="header-links">
-        <img src="header-logo.png" alt="Logo" class="header-logo">
-        <a href="#home" class="nav-link active">Redes Sociais</a>
+        <img src="header-logo.png" href="home" alt="Logo" class="header-logo">
         <a href="#about" class="nav-link">Quem Somos</a>
         <a href="#news" class="nav-link">Noticias</a>
         <a href="#contact" class="nav-link">Contate-nos</a>
     </div>
 </header>
-    <main>
-        <section id="home">
-            <p></p>
-            <h2>Redes Sociais</h2>
-
-            <div class="topics">
-                <div id="telegram">
-
-                    <button onclick="location.href='https://www.instagram.com/jaguargremio'"><i class="fab fa-instagram"></i> Instagram</button>
-
-                    <p>📌 O que você encontra aqui?</p>
-
-                    <p>Notícias e avisos importantes,
-                        Eventos e projetos escolares,
-                        Espaço para sua opinião e participação</p>
-
-                </div>
-
+<main>
+    <section id="home">
+        <h2>Redes Sociais</h2>
+        <div class="topics">
+            <div id="telegram">
+                <button onclick="location.href='https://www.instagram.com/jaguargremio'"><i class="fab fa-instagram"></i> Instagram</button>
+                <p>📌 O que você encontra aqui?</p>
+                <p>Notícias e avisos importantes, Eventos e projetos escolares, Espaço para sua opinião e participação</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-            <section id="about">
-                <div class="contact-section">
+    <section id="about">
+        <div class="contact-section">
+            <h2>Quem Somos?</h2>
+            <p><strong>A Imprensa do Grêmio Estudantil</strong> é um setor do <strong>Grêmio Estudantil</strong> dedicada à comunicação e divulgação de informações para a comunidade escolar. Nosso objetivo é informar, conscientizar e engajar os estudantes sobre assuntos como eventos, projetos, reivindicações e debates de interesse da escola.</p>
+        </div>
+    </section>
 
-                    <h2>Quem Somos?</h2> <!-- About section header -->
-                    <p><strong>A Imprensa do Grêmio Estudantil</strong> é um setor do <strong>Grêmio Estudantil</strong> dedicada à comunicação e divulgação de informações para a comunidade escolar. Nosso objetivo é informar, conscientizar e engajar os estudantes sobre assuntos como eventos, projetos, reivindicações e debates de interesse da escola.</p>
-                </div>
-            </section>
+    <section id="news">
+        <div class="contact-section">
+            <h2>Notícias</h2>
+            <div class="autoplay">
+                <button class="news-card" id="noticia1-btn">
+                    <img src="Noticias/noticia1.jpeg" alt="Notícia 1" class="news-image" />
+                    <p class="news-description">Descrição da Notícia 1</p>
+                </button>
 
-            <section id="news">
-                <div class="contact-section">
-                    <h2>Notícias</h2>
-                    <div class="autoplay">
-                        <div class="news-card" id="noticia1">
-                            <img src="Noticias/noticia1.jpeg" alt="Notícia 1" class="news-image" />
-                            <p class="news-description">Descrição da Notícia 1</p>
-                        </div>
-                        <div class="news-card" id="noticia2">
-                            <img src="Noticias/noticia2.jpeg" alt="Notícia 2" class="news-image" />
-                            <p class="news-description">Descrição da Notícia 2</p>
-                        </div>
-                        <div class="news-card" id="noticia3">
-                            <img src="Noticias/noticia3.jpeg" alt="Notícia 3" class="news-image" />
-                            <p class="news-description">Descrição da Notícia 3</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                <button class="news-card" id="noticia2-btn">
+                    <img src="Noticias/noticia2.jpeg" alt="Notícia 2" class="news-image" />
+                    <p class="news-description">Descrição da Notícia 2</p>
+                </button>
 
-        <section id="contact">
-            <h2>Contate o Gremio</h2>
-            <div class="contact-section">
-                <p>Se você tem alguma duvida ou sugestão sinta-se livre para nos contatar</p>
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:imprensajaguar@gmail.com" style="color: #c4c4c4;">imprensajaguar@gmail.com</a></p>
-            </div> <!-- Correctly closing the div here -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Website</p>
-    </footer>
+                <button class="news-card" id="noticia3-btn">
+                    <img src="Noticias/noticia3.jpeg" alt="Notícia 3" class="news-image" />
+                    <p class="news-description">Descrição da Notícia 3</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contate o Gremio</h2>
+        <div class="contact-section">
+            <p>Se você tem alguma duvida ou sugestão sinta-se livre para nos contatar</p>
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:imprensajaguar@gmail.com" style="color: #c4c4c4;">imprensajaguar@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- The Modals -->
+    <div id="noticia1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <div id="noticia2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <div id="noticia3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2025 Website</p>
+</footer>
+<script src="scripts.js" defer></script>
 </body>
 </html>

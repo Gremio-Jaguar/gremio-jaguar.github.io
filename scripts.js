@@ -1,52 +1,33 @@
-/* filepath: /d:/Kayky/Workspace/gremio-jaguar.github.io/scripts.js */
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = "block";
-}
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Get the modals
+    var modals = document.querySelectorAll('.modal');
 
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = "none";
-}
+    // Get the buttons that open the modals
+    var btns = document.querySelectorAll('.news-card');
 
-$(document).ready(function(){
-    $('.autoplay').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: true,
-        infinite: true,
-        speed: 300,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
+    // Get the <span> elements that close the modals
+    var spans = document.querySelectorAll('.close');
+
+    // When the user clicks the button, open the modal 
+    btns.forEach((btn, index) => {
+        btn.onclick = function() {
+            modals[index].style.display = "block";
+        }
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    spans.forEach((span, index) => {
+        span.onclick = function() {
+            modals[index].style.display = "none";
+        }
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        modals.forEach((modal) => {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
-        ]
-    });
-
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-        link.addEventListener('click', function() {
-            links.forEach(link => link.classList.remove('active'));
-            this.classList.add('active');
         });
-    });
+    }
 });
-
-let slideIndex = 0;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-    const slides = document.querySelectorAll('.news-card');
-    if (n >= slides.length) { slideIndex = 0 }
-    if (n < 0) { slideIndex = slides.length - 1 }
-    const offset = -slideIndex * 100 / slides.length;
-    document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
-}

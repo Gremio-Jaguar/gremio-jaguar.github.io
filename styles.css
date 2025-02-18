@@ -2,40 +2,45 @@ body {
     font-family: 'Bahnschrift', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #0d0d0d; /* Pastel green background color */
-    color: #c4c4c4; /* Pastel green text color */ 
+    background-color: #0d0d0d; /* Background color */
+    color: #c4c4c4; /* Text color */ 
     padding: 0;
-    margin: 0px;
+    margin: 0;
 }
+
 h2 {
-    color: #c4c4c4; /* Pastel green color */
+    color: #c4c4c4; /* Text color */
     padding: 10px;
     text-align: center;
     margin: 0;
 }
+
 h3 {
-    color: #ffffff; /* White color */
+    color: #ffffff; /* Text color */
     padding: 10px;
     text-align: center;
     margin: 20px 0; /* Add margin to separate from other content */
     border-radius: 5px; /* Rounded corners */
 }
+
 .topics {
     display: flex;
     justify-content: space-around;
     padding: 20px;
 }
+
 .topics div {
     flex: 1;
     margin: 0 10px; /* Add margin between dividers */
     text-align: center;
-    background-color: #141414; /* Pastel green background color for dividers */
+    background-color: #141414; /* Background color for dividers */
     padding: 20px;
     border-radius: 10px; /* Rounded corners for dividers */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .topics-alt {
     display: flex;
     justify-content: space-around;
@@ -126,7 +131,7 @@ h3 {
     box-sizing: border-box; 
 }
 .topics button:hover {
-    background-color:  hsl(230, 10%, 28%); /* Darker pastel green on hover */
+    background-color: hsl(230, 10%, 28%); /* Darker color on hover */
     color: #c4c4c4;
 }
 .topics p {
@@ -164,54 +169,52 @@ header {
     top: 0; /* Position the header at the top */
     z-index: 1000; /* Ensure the header is above other content */
 }
-    .header-logo {
-        margin-left: 5px; /* Add margin to the left of the log o */
-        height: 60px; /* Set the height of the logo to match the header */
-    }
 
-    .header-links {
-        display: flex;
-        align-items: center;
-        gap: 15px; /* Space between links */
-        margin-left: 0px; /* Add margin to the left of the links */
-    }
-        .header-links a {
-            color: #d8d8d8; /* White text color for better contrast */
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-        }
-            .header-links a:hover
-            {
-                color: #ffffff;
-            }
-        .header-links a {
-            position: relative;
-            text-decoration: none;
-            color: #ffffff; /* Adjust the color as needed */
-            padding: 10px;
-            transition: color 0.3s ease;
-        }
+.header-logo {
+    margin-left: 5px; /* Add margin to the left of the logo */
+    height: 60px; /* Set the height of the logo to match the header */
+}
 
-        .header-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            display: block;
-            right: 0;
-            background: #ffffff; /* Adjust the color as needed */
-            transition: width 0.3s ease, background-color 0.3s ease;
-            border-radius: 5px; /* Make the border rounded */
-        }
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between links */
+    margin-left: 0; /* Add margin to the left of the links */
+}
 
-        .header-links a:hover::after,
-        .header-links a.active::after {
-            width: 100%;
-            left: 0;
-            background: #ffffff; /* Adjust the color as needed */
-            border-radius: 5px; /* Make the border rounded */
-        }
+.header-links a {
+    color: #d8d8d8; /* Text color */
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+    color: #ffffff;
+}
+
+.header-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    right: 0;
+    background: #ffffff; /* Adjust the color as needed */
+    transition: width 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px; /* Make the border rounded */
+}
+
+.header-links a:hover::after,
+.header-links a.active::after {
+    width: 100%;
+    left: 0;
+    background: #ffffff; /* Adjust the color as needed */
+    border-radius: 5px; /* Make the border rounded */
+}
 main {
     padding-top: 60px; /* Add padding to avoid content being hidden behind the fixed header */
 }
@@ -246,56 +249,9 @@ main {
         height: 60px; /* Adjust height for smaller screens */
         margin-left: -2px;
     }
-    main {
+        main {
         padding-top: 80px; /* Adjust padding to avoid content being hidden behind the fixed header */
     }
-}
-
-/* Slider container */
-.slider {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-    border-radius: 10px; /* Rounded corners */
-}
-
-/* Slides */
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Individual slide */
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-/* Navigation buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
 }
 
 /* News cards container */
@@ -303,7 +259,7 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
 }
 
@@ -312,15 +268,17 @@ main {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
+    gap: 15px;
 }
+
 
 /* Individual news card */
 .news-card {
     background-color: #1f1f1f; /* Background color for the card */
     border-radius: 10px; /* Rounded corners */
     padding: 10px;
+    border: 0px;
+    font-family: inherit;
     width: 200px; /* Fixed width for the card */
     text-align: center;
     transition: transform 0.3s ease; /* Smooth zoom effect */
@@ -353,4 +311,109 @@ main {
     .news-card {
         width: 100%; /* Full width for mobile */
     }
+}
+.noticia1, .noticia2, .noticia3  {
+        background-color: #04AA6D; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+.modal1, .modal2, .modal3 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal1-content, .modal2-content, .modal3-content {
+    background-color: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.noticia1-btn, .noticia2-btn, .noticia3-btn {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: rgb(110, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    appearance: none; /* Remove default button appearance */
+    -webkit-appearance: none; /* Remove default button appearance for Safari */
+    -moz-appearance: none; /* Remove default button appearance for Firefox */
 }
