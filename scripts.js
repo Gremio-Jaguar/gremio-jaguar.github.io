@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeModals();
     initializeNavigation();
+    initializeHeaderScroll();
 });
 
 function initializeModals() {
@@ -11,6 +12,19 @@ function initializeModals() {
     // Open modal when clicking on news card
     newsCards.forEach(card => {
         card.addEventListener('click', () => {
+            if (card.classList.contains('closed')) {
+                const modalId = card.getAttribute('data-modal');
+                let message = '';
+                
+                if (modalId === 'noticia1') {
+                    message = 'Desculpe, as inscrições para o Grêmio Estudantil estão temporariamente encerradas.\n\nAguarde o próximo período de inscrições!';
+                } else if (modalId === 'noticia2') {
+                    message = 'A venda de Chup Chup Cremoso foi finalizada.\n\nObrigado a todos que participaram! Fique atento para as próximas promoções.';
+                }
+                
+                alert(message);
+                return;
+            }
             const modalId = card.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
             if (modal) openModal(modal);
@@ -84,4 +98,29 @@ function initializeNavigation() {
             }
         });
     });
+}
+
+function initializeHeaderScroll() {
+    const header = document.querySelector('header');
+    const hero = document.querySelector('.hero-section');
+    let heroBottom = hero.offsetTop + hero.offsetHeight;
+
+    function updateHeader() {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > heroBottom - header.offsetHeight) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    window.addEventListener('scroll', updateHeader);
+    window.addEventListener('resize', () => {
+        heroBottom = hero.offsetTop + hero.offsetHeight;
+        updateHeader();
+    });
+    
+    // Initial check
+    updateHeader();
 }
