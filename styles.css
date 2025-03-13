@@ -33,10 +33,20 @@ body {
 
 /* Typography */
 h1 {
+  color: #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  max-width: 900px;
+  margin-top: 100px;
+  margin-bottom: 0;
+  padding: 0 0 20px 0;
   font-family: 'Inter', sans-serif;
-  letter-spacing: -0.02em;
+  font-size: 6rem;
   font-weight: 700;
-  color: var(--color-light);
+  line-height: 100%;
 }
 
 h2, h3, h4, h5, h6 {
@@ -44,8 +54,31 @@ h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: 4rem;
-  margin-bottom: 1rem;
+  color: var(--color-light);
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  max-width: none;
+  margin-top: 0;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 3rem;
+  }
 }
 
 /* Header & Navigation */
@@ -56,9 +89,12 @@ header {
   right: 0;
   z-index: 100;
   background: transparent;
-  padding: 1rem;
+  padding: 1rem 2rem;
   transition: all 0.3s ease;
   height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header.scrolled {
@@ -81,7 +117,7 @@ header.scrolled .logo {
 }
 
 .logo img {
-  height: 2rem;
+  height: 3 rem;
   width: auto;
 }
 
@@ -102,7 +138,7 @@ header.scrolled .logo {
 }
 
 .header-logo {
-  height: calc(var(--header-height) - 20px);
+  height: calc(var(--header-height) + 10px);
   z-index: 1;
   filter: invert(1) brightness(100%);
 }
@@ -114,6 +150,7 @@ header.scrolled .header-logo {
 .nav-links {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav-link {
@@ -144,23 +181,38 @@ header.scrolled .header-logo {
   width: 100%;
 }
 
-.header-links a {
+.nav-links a {
   color: var(--color-light);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.3s;
 }
 
-.header-links a:hover {
+.nav-links a:hover {
   opacity: 0.8;
 }
 
-header.scrolled .header-links a {
+header.scrolled .nav-links a {
   color: var(--color-text);
 }
 
-header.scrolled .header-links a:hover {
+header.scrolled .nav-links a:hover {
   opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
 }
 
 /* Hero Section */
@@ -228,10 +280,6 @@ header.scrolled .header-links a:hover {
 @media (max-width: 768px) {
   .hero-section {
     background-attachment: scroll;
-  }
-  
-  .hero-title {
-    font-size: 3rem;
   }
   
   .hero-subtitle {
@@ -597,43 +645,9 @@ footer {
   :root {
     --header-height: 60px;
   }
-  
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
-  
-  .menu-toggle span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--color-text);
-    margin: 4px 0;
-    transition: var(--transition);
-  }
-  
-  .section-container {
-    padding: 2rem 1rem;
-    margin: 1rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-  
   .hero-subtitle {
     font-size: 1rem;
   }
@@ -711,10 +725,6 @@ a:not(.social-button):hover:after {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
   .hero-subtitle {
     font-size: 1.1rem;
   }
@@ -727,33 +737,9 @@ a:not(.social-button):hover:after {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
-  .nav-links {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
-    background: var(--color-bg);
-    padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-  }
-
-  .nav-links.active {
-    transform: translateY(0);
-  }
-
-  .menu-toggle {
-    display: block;
-  }
 }
 
 @media (min-width: 769px) {
-  .menu-toggle {
-    display: none;
-  }
 }
 
 /* Contact section closed banner */
