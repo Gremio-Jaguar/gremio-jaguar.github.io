@@ -1,152 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576473601367715"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grêmio Jaguar</title>
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/197407915?s=400&u=58cff4d108eb3b7fe2fb2c65aa15100926315136&v=4">
+    <meta name="description" content="Site Oficial do Grêmio Estudantil da FUNEC - Nova Contagem">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Grêmio Jaguar">
     <meta property="og:description" content="Site Oficial do Grêmio Estudantil da FUNEC - Nova Contagem">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/197407915?s=400&u=58cff4d108eb3b7fe2fb2c65aa15100926315136&v=4">
     <meta property="og:url" content="https://gremio-jaguar.github.io/">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Grêmio Jaguar - FUNEC Nova Contagem</title>
+    
+    <!-- Styles and Scripts -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1576473601367715" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <div class="header-links">
-        <img src="header-logo.png" href="home" alt="Logo" class="header-logo">
-        <a href="#about" class="nav-link">Quem Somos</a>
-        <a href="#news" class="nav-link">Noticias</a>
-        <a href="#contact" class="nav-link">Contate-nos</a>
-    </div>
-</header>
-<main>
-    <section id="home">
-        <h2>Redes Sociais</h2>
-        <div class="topics">
-            <div id="telegram">
-                <button onclick="location.href='https://www.instagram.com/jaguargremio'"><i class="fab fa-instagram"></i> Instagram</button>
-                <p>📌 O que você encontra aqui?</p>
-                <p>Notícias e avisos importantes, Eventos e projetos escolares, Espaço para sua opinião e participação</p>
+    <header class="glass-nav">
+        <nav class="header-links">
+            <a href="#home" aria-label="Ir para página inicial" class="logo-container">
+                <img src="header-logo.png" alt="Logo Grêmio Jaguar" class="header-logo">
+                <div class="logo-glow"></div>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link"><span>Quem Somos</span></a>
+                <a href="#news" class="nav-link"><span>Notícias</span></a>
+                <a href="#contact" class="nav-link"><span>Contate-nos</span></a>
             </div>
-        </div>
-    </section>
+            <button class="menu-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
 
-    <section id="about">
-        <div class="contact-section">
-            <h2>Quem Somos?</h2>
-            <p><strong>A Imprensa do Grêmio Estudantil</strong> é um setor do <strong>Grêmio Estudantil</strong> dedicada à comunicação e divulgação de informações para a comunidade escolar. Nosso objetivo é informar, conscientizar e engajar os estudantes sobre assuntos como eventos, projetos, reivindicações e debates de interesse da escola.</p>
-        </div>
-    </section>
-
-    <section id="news">
-        <div class="contact-section">
-            <h2>Notícias</h2>
-            <div class="autoplay">
-                <button class="news-card" id="noticia1-btn">
-                    <img src="Noticias/noticia1.jpeg" alt="Notícia 1" class="news-image" />
-                    <p class="news-description"><strong>Entre para o Grêmio!</strong></p>
-                </button>
-
-                <button class="news-card" id="noticia2-btn">
-                    <img src="Noticias/noticia2.jpg" alt="Notícia 2" class="news-image" />
-                    <p class="news-description">O Grêmio está promovendo a <strong>Venda de Chup Chup Cremoso hoje no dia 27/02</strong></p>
-                </button>
-
-                <button class="news-card" id="noticia3-btn">
-                    <img src="Noticias/noticia3.jpg" alt="Notícia 3" class="news-image" />
-                    <p class="news-description">Terceira edição do jornal</p>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contate o Gremio</h2>
-        <div class="contact-section">
-            <p>Se você tem alguma duvida ou sugestão sinta-se livre para nos contatar</p>
-            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:imprensajaguar@gmail.com" style="color: #c4c4c4;">imprensajaguar@gmail.com</a></p>
-        </div>
-    </section>
-
-    <!-- The Modals -->
-    <div id="noticia1" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe9SHKuaAXE-dt6Xcj1XpbQGrXakTS7S86Agv6aipd-ElYrdA/viewform" 
-        width="auto" 
-        height="600px" 
-        frameborder="0"
-        marginheight="0" 
-        marginwidth="0">Carregando…</iframe>
-    </p>
-                <h2 class="news-description">Formulario Acima:
-
-                </h2>
-        </div>
-    </div>
-
-    <div id="noticia2" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p><img src="Noticias/noticia2.jpg" alt="Notícia 2" class="news-image" />
-                </p>
-                <p class="news-description"><h2><strong>📣 Atenção, pessoal! 📣</h2></strong>
-
-                    <p>O Grêmio Estudantil Jaguar está promovendo uma deliciosa venda de Chup Chup Cremoso hoje, dia 27 de fevereiro! 🍧</p>
-                    
-                    <h2>Os sabores que serão vendidos: 
-                    <p>
-                    - Amendoim
-                    </p>
-                    <p>
-                    - Morango
-                    </p>
-                    - Limão
-                    <p>
-                    - Manga
-                    </p>
-                    </h2>
-                    <h2>🌟 Preço da unidade: Cada chup chup por apenas R$ 2,50!
-                    <p></p>  
-                    💥 Promoção Imperdível: Compre 3 Chup Chup por apenas R$ 5,50!
-                    </h2>
-                    
-                    Não perca essa oportunidade de se refrescar e ainda ajudar o Grêmio nas nossos próximos eventos, inclusive para pagar os ônibus da Interfunec! Vamos estar vendendo ao lado da quadra.
-                    
-                    Esperamos por você!
-
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title">Grêmio Jaguar</h1>
+                <p class="hero-subtitle">Representando os alunos da ETEC Jaraguá</p>
+                <div class="social-buttons">
+                    <a href="https://www.instagram.com/jaguargremio/" target="_blank" class="social-button">
+                        <i class="fab fa-instagram"></i>
+                        Siga no Instagram
+                    </a>
                 </div>
-    </div>
+            </div>
+            <div class="hero-background">
+                <div class="gradient-sphere"></div>
+                <div class="grid-overlay"></div>
+            </div>
+        </section>
 
-    <div id="noticia3" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p><img src="Noticias/noticia3.jpg" alt="Notícia 3" class="news-image" />
-                </p>
-                <p class="news-description"><p><strong>Laboratório da FUNEC Nova Contagem</strong></p>
-                    
-                    A Escola Municipal Professora Ana Guedes Vieira e a FUNEC Nova Contagem firmaram uma parceria para compartilhar o mesmo espaço físico, otimizando o uso das instalações e beneficiando a comunidade local com novas oportunidades educacionais.
+        <section id="about" class="section-container" data-scroll>
+            <div class="section-header">
+                <h2>Quem Somos</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="content glass-card">
+                <p><strong>A Imprensa do Grêmio Estudantil</strong> é um setor do <strong>Grêmio Estudantil</strong> dedicado à comunicação e divulgação de informações para a comunidade escolar. Nosso objetivo é informar, conscientizar e engajar os estudantes sobre assuntos como eventos, projetos, reivindicações e debates de interesse da escola.</p>
+            </div>
+        </section>
 
-                    <p><strong>Iniciação Científica Jr</strong></p>
-                    
-                    O Programa de Iniciação Científica Júnior (ICJ) da FUNEC, criado em 2008, visa inserir estudantes do Ensino Médio e Técnico na pesquisa científica, desenvolvendo habilidades como pensamento crítico e experimentação.
-                    
-                    <p><strong>Filme Brasileiro no Oscar</strong></p>
-                    
-                    O filme brasileiro "I’m Still Here" (2024) foi indicado a três categorias no 97º Oscar, incluindo Melhor Filme, marcando a primeira vez que um filme brasileiro concorre na principal categoria da premiação.
+        <section id="news" class="section-container" data-scroll>
+            <div class="section-header">
+                <h2>Notícias</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="news-grid">
+                <article class="news-card glass-card" data-modal="noticia1">
+                    <div class="card-content">
+                        <img src="Noticias/noticia1.jpeg" alt="Entre para o Grêmio" class="news-image" loading="lazy">
+                        <div class="card-overlay">
+                            <h3 class="news-title">Entre para o Grêmio!</h3>
+                            <span class="read-more">Saiba mais →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card" data-modal="noticia2">
+                    <div class="card-content">
+                        <img src="Noticias/noticia2.jpg" alt="Venda de Chup Chup Cremoso" class="news-image" loading="lazy">
+                        <div class="card-overlay">
+                            <h3 class="news-title">Venda de Chup Chup Cremoso</h3>
+                            <span class="read-more">Saiba mais →</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="news-card glass-card" data-modal="noticia3">
+                    <div class="card-content">
+                        <img src="Noticias/noticia3.jpg" alt="Terceira edição do jornal" class="news-image" loading="lazy">
+                        <div class="card-overlay">
+                            <h3 class="news-title">Terceira edição do jornal</h3>
+                            <span class="read-more">Saiba mais →</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section-container" data-scroll>
+            <div class="section-header">
+                <h2>Contate o Grêmio</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="content glass-card">
+                <p>Se você tem alguma dúvida ou sugestão, sinta-se livre para nos contatar:</p>
+                <a href="mailto:imprensajaguar@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <span>imprensajaguar@gmail.com</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Modais -->
+        <div class="modal-container">
+            <div id="noticia1" class="modal" role="dialog" aria-labelledby="modal1Title">
+                <div class="modal-content glass-card">
+                    <button class="close" aria-label="Fechar modal">&times;</button>
+                    <h2 id="modal1Title">Formulário de Inscrição</h2>
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSe9SHKuaAXE-dt6Xcj1XpbQGrXakTS7S86Agv6aipd-ElYrdA/viewform" 
+                        title="Formulário de Inscrição para o Grêmio"
+                        width="100%" 
+                        height="600">
+                        Carregando formulário...
+                    </iframe>
+                </div>
+            </div>
+
+            <div id="noticia2" class="modal" role="dialog" aria-labelledby="modal2Title">
+                <div class="modal-content glass-card">
+                    <button class="close" aria-label="Fechar modal">&times;</button>
+                    <article>
+                        <h2 id="modal2Title">Venda de Chup Chup Cremoso! 🍧</h2>
+                        <img src="Noticias/noticia2.jpg" alt="Venda de Chup Chup Cremoso" class="news-image">
+                        <div class="news-details">
+                            <p>O Grêmio Estudantil Jaguar está promovendo uma deliciosa venda de Chup Chup Cremoso hoje, dia 27 de fevereiro!</p>
+                            
+                            <div class="info-card">
+                                <h3>Sabores Disponíveis</h3>
+                                <ul class="flavor-list">
+                                    <li>Amendoim</li>
+                                    <li>Morango</li>
+                                    <li>Limão</li>
+                                    <li>Manga</li>
+                                </ul>
+                            </div>
+
+                            <div class="pricing-card">
+                                <div class="price-tag">
+                                    <span>Preço unitário</span>
+                                    <strong>R$ 2,50</strong>
+                                </div>
+                                <div class="price-tag special">
+                                    <span>Promoção</span>
+                                    <strong>3 por R$ 5,50</strong>
+                                </div>
+                            </div>
+
+                            <p class="highlight-text">Não perca essa oportunidade de se refrescar e ainda ajudar o Grêmio nos próximos eventos, inclusive para pagar os ônibus da Interfunec! Estaremos vendendo ao lado da quadra.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div id="noticia3" class="modal" role="dialog" aria-labelledby="modal3Title">
+                <div class="modal-content glass-card">
+                    <button class="close" aria-label="Fechar modal">&times;</button>
+                    <article>
+                        <h2 id="modal3Title">Destaques da Terceira Edição</h2>
+                        <img src="Noticias/noticia3.jpg" alt="Terceira edição do jornal" class="news-image">
+                        <div class="news-details">
+                            <div class="news-grid-container">
+                                <section class="news-item">
+                                    <h3>Laboratório da FUNEC Nova Contagem</h3>
+                                    <p>A Escola Municipal Professora Ana Guedes Vieira e a FUNEC Nova Contagem firmaram uma parceria para compartilhar o mesmo espaço físico, otimizando o uso das instalações e beneficiando a comunidade local com novas oportunidades educacionais.</p>
+                                </section>
+
+                                <section class="news-item">
+                                    <h3>Iniciação Científica Jr</h3>
+                                    <p>O Programa de Iniciação Científica Júnior (ICJ) da FUNEC, criado em 2008, visa inserir estudantes do Ensino Médio e Técnico na pesquisa científica, desenvolvendo habilidades como pensamento crítico e experimentação.</p>
+                                </section>
+
+                                <section class="news-item">
+                                    <h3>Filme Brasileiro no Oscar</h3>
+                                    <p>O filme brasileiro "I'm Still Here" (2024) foi indicado a três categorias no 97º Oscar, incluindo Melhor Filme, marcando a primeira vez que um filme brasileiro concorre na principal categoria da premiação.</p>
+                                </section>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </div>
-    </div>
-</main>
-<footer>
-    <p>&copy; 2025 Website</p>
-</footer>
-<script src="scripts.js" defer></script>
+    </main>
+
+    <footer class="glass-card">
+        <p>&copy; 2024 Grêmio Jaguar - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
 </body>
 </html>
